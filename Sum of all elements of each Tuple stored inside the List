@@ -1,0 +1,12 @@
+tup=[]
+n=int(input("Enter the number of tuples in a list:"))
+for i in range(n):
+    numbers=tuple(map(int,input("Enter the numbers separated by space:").split()))
+    tup.append(numbers)
+
+for j in tup:
+    total=0
+    for num in j:
+        total+=num
+    
+    print(f"Sum of {j} is {total}")
