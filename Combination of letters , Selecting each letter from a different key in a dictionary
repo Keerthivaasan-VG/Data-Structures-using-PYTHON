@@ -1,0 +1,11 @@
+dic={}
+n=int(input("Enter the number of combinations: "))
+for i in range(n):
+    key=input(f"Enter the {i+1} key:")
+    values=input(f"Enter the {i+1} value:")
+    dic[key]=values
+
+value=dic.values()
+for j in value:
+    for k in value:
+        print(j,k)
