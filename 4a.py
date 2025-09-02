@@ -44,5 +44,3 @@ if __name__=="__main__":
     Q.disp()
     Q.dequeue()
     Q.disp()
-ABISHEK V<24ucs079@kamarajengg.edu.in>
-​KEERTHIVAASAN V G;​MATHESHWARAN S;​MARIA KELVIN R
