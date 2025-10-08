@@ -5,26 +5,26 @@ def linear_search(roll_numbers, key):
     return -1
 
 def binary_search(roll_numbers, key):
-    roll_numbers.sort()  
+    sorted_rolls = sorted(roll_numbers)  # keep original list safe
     low = 0
-    high = len(roll_numbers) - 1
+    high = len(sorted_rolls) - 1
 
     while low <= high:
         mid = (low + high) // 2
-        if roll_numbers[mid] == key:
+        if sorted_rolls[mid] == key:
             return mid
-        elif roll_numbers[mid] < key:
+        elif sorted_rolls[mid] < key:
             low = mid + 1
         else:
             high = mid - 1
     return -1
+
 
 roll_numbers = []
 n = int(input("Enter the number of students registered for the exam: "))
 for i in range(n):
     roll = int(input(f"Enter roll number of student {i + 1}: "))
     roll_numbers.append(roll)
-
 
 key = int(input("Enter roll number to search: "))
 
@@ -36,6 +36,6 @@ else:
 
 pos2 = binary_search(roll_numbers, key)
 if pos2 != -1:
-    print(f"Binary Search: Roll number {key} found at position {pos2 + 1}.")
+    print(f"Binary Search: Roll number {key} found at position {pos2 + 1} (in sorted list).")
 else:
     print(f"Binary Search: Roll number {key} not found.")
